@@ -42,7 +42,7 @@ module.exports = {
   //无权限code
   noPermissionCode: 401,
   //是否显示在页面高亮错误
-  errorLog: ["development", "test", "production"],
+  errorLog: false,
   //设置生产环境是否屏蔽f12等开发组工具快捷键
   shieldF12: false,
   //是否开启登录拦截

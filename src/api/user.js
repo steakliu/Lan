@@ -19,7 +19,7 @@ export function getInfo(accessToken) {
 
 export function logout() {
   return request({
-    url: "/logout",
-    method: "post",
+    url: "/sso/loginOut",
+    method: "get",
   });
 }

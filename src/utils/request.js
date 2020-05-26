@@ -22,6 +22,7 @@ const service = axios.create({
 let loadingInstance;
 service.interceptors.request.use(
   (config) => {
+    config.withCredentials = true;
     if (store.getters.accessToken) {
       config.headers[tokenName] = store.getters.accessToken;
     }
