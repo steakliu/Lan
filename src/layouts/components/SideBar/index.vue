@@ -4,7 +4,6 @@
   >
     <logo />
     <el-menu
-      :unique-opened="true"
       :background-color="variables['menu-background']"
       :text-color="variables['menu-color']"
       :active-text-color="variables['menu-color-active']"
@@ -38,24 +37,24 @@ export default {
   },
   computed: {
     ...mapGetters(["collapse", "routes"]),
-    defaultOpen() {
-      if (this.collapse) {
-      }
-      let arr = this.routes.map((item) => {
-        return path.resolve(item.path);
-      });
-      /*只默认展开除了首页,登录,404,重定向以外的第一级*/
-      arr = this.$baseLodash.pull(
-        arr,
-        "/",
-        "/!*",
-        "/login",
-        "/404",
-        "/401",
-        "/redirect"
-      );
-      return arr;
-    },
+    // defaultOpen() {
+    //   if (this.collapse) {
+    //   }
+    //   let arr = this.routes.map((item) => {
+    //     return path.resolve(item.path);
+    //   });
+    //   /*只默认展开除了首页,登录,404,重定向以外的第一级*/
+    //   arr = this.$baseLodash.pull(
+    //     arr,
+    //     "/",
+    //     "/!*",
+    //     "/login",
+    //     "/404",
+    //     "/401",
+    //     "/redirect"
+    //   );
+    //   return arr;
+    // },
     activeMenu() {
       const route = this.$route;
       const { meta, path } = route;

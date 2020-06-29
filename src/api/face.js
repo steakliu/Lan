@@ -1,10 +1,9 @@
 import request from "@/utils/request";
 
-export function getList(data) {
+export function getList() {
   return request({
-    url: "/face/list",
-    method: "post",
-    data,
+    url: "/basic/websocket",
+    method: "get",
   });
 }
 

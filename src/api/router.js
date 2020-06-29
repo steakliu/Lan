@@ -2,7 +2,7 @@ import request from "@/utils/request";
 
 export function getRouterList(data) {
   return request({
-    url: "/menu/selectRoutesByUserId",
+    url: "/basic/selectRoutesByUserId",
     method: "get",
     data,
   });

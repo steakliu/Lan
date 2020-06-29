@@ -38,7 +38,7 @@ module.exports = {
   publicPath: "",
   assetsDir: "static",
   outputDir: "dist",
-  lintOnSave: true,
+  lintOnSave: false,
   transpileDependencies: ["vue-echarts", "resize-detector"],
   devServer: {
     hot: true,
